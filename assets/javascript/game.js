@@ -42,8 +42,29 @@ function update(){
 	  createGoal();
 	 	document.querySelector("#rand").innerHTML = goal;
 	  console.log ("new goal: " + goal);
-	  diamondValue = Math.floor((Math.random()*12) +1);
- 	  console.log ("new score: " + score );
+    diamondValue = Math.floor((Math.random()*12) +1);
+    spadeValue  = Math.floor((Math.random()*12) +1);
+    heartValue  = Math.floor((Math.random()*12) +1);
+    clubsValue  = Math.floor((Math.random()*12) +1);
+	  console.log ("new score: " + score );
+
+// Nonia'
+
+// function update(){
+//  document.querySelector("#wins").innerHTML = win;
+//  score = 0;
+//  document.querySelector("#value").innerHTML = score;
+//  createGoal();
+//  document.querySelector("#rand").innerHTML = goal;
+//  console.log ("new goal: " + goal);
+//  diamondValue = Math.floor((Math.random()*12) +1);
+//  console.log ("new score: " + score );
+
+// }
+
+
+
+
 
 }
 
