@@ -8,7 +8,6 @@ body{
   border: 3px solid black;
 
 
-
   /*background: url("href="http://www.freepik.com/free-photos-vectors/background">Background vector created by Kjpargeter - Freepik.com");*/
 
 }
@@ -69,7 +68,7 @@ body {
 	font-family: times, sans-serif;
     font-size: 18px;
     border-radius: 2px;
-    border: 1px solid url("../images/sm_main.png");
+   /* border: 1px solid url("../images/sm_main.png");*/
 	padding: 5px; 
 	margin-left: 5px;
 	color: green;
