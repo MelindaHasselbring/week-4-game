@@ -35,20 +35,26 @@ function createGoal(){
 }
 
 function update(){
-    document.querySelector("#wins").innerHTML = win;
-  	score = "";
-	 	document.querySelector("#value").innerHTML = score;
-	 	goal = ""; 
-	  createGoal();
-	 	document.querySelector("#rand").innerHTML = goal;
-	  console.log ("new goal: " + goal);
-    diamondValue = Math.floor((Math.random()*12) +1);
-    spadeValue  = Math.floor((Math.random()*12) +1);
-    heartValue  = Math.floor((Math.random()*12) +1);
-    clubsValue  = Math.floor((Math.random()*12) +1);
-	  console.log ("new score: " + score );
 
-// Nonia'
+// Nonia'   //  document.querySelector("#wins").innerHTML = win;
+    // score = "";
+    // document.querySelector("#value").innerHTML = score;
+    // goal = ""; 
+    // createGoal();
+    // document.querySelector("#rand").innerHTML = goal;
+    // console.log ("new goal: " + goal);
+    // diamondValue = Math.floor((Math.random()*12) +1);
+    // spadeValue  = Math.floor((Math.random()*12) +1);
+    // heartValue  = Math.floor((Math.random()*12) +1);
+    // clubsValue  = Math.floor((Math.random()*12) +1);
+    // console.log ("new score: " + score );
+    // console.log ("new diamondValue: " + score );
+    // console.log ("new spadeValue: " + score );
+    // console.log ("new heartValue: " + score );
+    // console.log ("clubsValue: " + score );
+
+
+
 
 // function update(){
 //  document.querySelector("#wins").innerHTML = win;
@@ -59,8 +65,7 @@ function update(){
 //  console.log ("new goal: " + goal);
 //  diamondValue = Math.floor((Math.random()*12) +1);
 //  console.log ("new score: " + score );
-
-// }
+}
 
 
 
