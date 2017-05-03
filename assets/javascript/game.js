@@ -17,19 +17,21 @@ function createGoal(){
 
 	  goal = Math.floor(Math.random()*(max-min+1) +min);
 	  return goal;
- //  goal = Math.floor((Math.random()*120) +19);
-	// var score = "";
-	// var maxGoal = 120;
- //  	console.log("goal is:" + goal);
-	// if (goal >  120){
-	// 	alert ("goal is not valid!");
- //  		goal = maxGoal;
- //  		console.log("new goal is:" + goal);
- //  		return goal;
- //  	} 
-	// else if(goal >18 || goal <  121){
- //  		return goal;
-	//  }
+//  goal = Math.floor((Math.random()*120) +19);
+//  var score = "";
+//  var maxGoal = 120;
+//  console.log("goal is:" + goal);
+//  if (goal >  120){
+// 	alert ("goal is not valid!");
+//  		goal = maxGoal;
+//  		console.log("new goal is:" + goal);
+//  		return goal;
+//  	   } 
+// else if(goal >18 || goal <  121){
+//  		return goal;
+//  }
+
+
 }
 
 function update(){
