@@ -12,36 +12,36 @@
 $(document).ready(function(){
   	 var goal;
 function createGoal(){
-	var min = 19; 
-	var max = 120; 
+	  var min = 19; 
+	  var max = 120; 
 
-	goal = Math.floor(Math.random()*(max-min+1) +min);
-	return goal;
-    goal = Math.floor((Math.random()*120) +19);
-	var score = "";
-	var maxGoal = 120;
-  	console.log("goal is:" + goal);
-	if (goal >  120){
-		alert ("goal is not valid!");
-  		goal = maxGoal;
-  		console.log("new goal is:" + goal);
-  		return goal;
-  	} 
-	else if(goal >18 || goal <  121){
-  		return goal;
-	 }
+	  goal = Math.floor(Math.random()*(max-min+1) +min);
+	  return goal;
+ //  goal = Math.floor((Math.random()*120) +19);
+	// var score = "";
+	// var maxGoal = 120;
+ //  	console.log("goal is:" + goal);
+	// if (goal >  120){
+	// 	alert ("goal is not valid!");
+ //  		goal = maxGoal;
+ //  		console.log("new goal is:" + goal);
+ //  		return goal;
+ //  	} 
+	// else if(goal >18 || goal <  121){
+ //  		return goal;
+	//  }
 }
 
 function update(){
-      	document.querySelector("#wins").innerHTML = win;
-  	 	score = "";
+    document.querySelector("#wins").innerHTML = win;
+  	score = "";
 	 	document.querySelector("#value").innerHTML = score;
 	 	goal = ""; 
-	  	createGoal();
+	  createGoal();
 	 	document.querySelector("#rand").innerHTML = goal;
-	  	console.log ("new goal: " + goal);
-	  	diamondValue = Math.floor((Math.random()*12) +1);
- 	  	console.log ("new score: " + score );
+	  console.log ("new goal: " + goal);
+	  diamondValue = Math.floor((Math.random()*12) +1);
+ 	  console.log ("new score: " + score );
 
 }
 
@@ -64,17 +64,17 @@ function update(){
 
     if (score === goal) {
      	// alert("You win!");
-      	win ++;
-      	document.querySelector("#wins").innerHTML = win;
-      	document.querySelector("#value").innerHTML = score;
+      win ++;
+      document.querySelector("#wins").innerHTML = win;
+      document.querySelector("#value").innerHTML = score;
   		// score = "";
-	 	// document.querySelector("#value").innerHTML = score;
-	 	// goal = ""; 
+	 	  // document.querySelector("#value").innerHTML = score;
+	 	  // goal = ""; 
 	  	// createGoal();
-	 	// document.querySelector("#rand").innerHTML = goal;
+	 	  // document.querySelector("#rand").innerHTML = goal;
 	  	// console.log ("new goal: " + goal);
 	  	// diamondValue = Math.floor((Math.random()*12) +1);
- 	 	// console.log ("new score: " + score );
+ 	 	  // console.log ("new score: " + score );
  	  	update();
     }
 
@@ -83,14 +83,14 @@ function update(){
       losses++;
       document.querySelector("#losses").innerHTML = losses;
       document.querySelector("#value").innerHTML = score;
-  		// score = "";
-	 	// document.querySelector("#value").innerHTML = score;
-	 	// goal = ""; 
-	  	// createGoal();
-	 	// document.querySelector("#rand").innerHTML = goal;
-	  	// console.log ("new goal: " + goal);
-	  	// diamondValue = Math.floor((Math.random()*12) +1);
- 	 	// console.log ("new score: " + score );
+      // score = "";
+      // document.querySelector("#value").innerHTML = score;
+      // goal = ""; 
+      // createGoal();
+      // document.querySelector("#rand").innerHTML = goal;
+      // console.log ("new goal: " + goal);
+      // diamondValue = Math.floor((Math.random()*12) +1);
+      // console.log ("new score: " + score );
  	  	update();
 	}
   });

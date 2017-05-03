@@ -17,7 +17,7 @@ function createGoal(){
 
 	goal = Math.floor(Math.random()*(max-min+1) +min);
 	return goal;
-     // goal = Math.floor((Math.random()*120) +19);
+    goal = Math.floor((Math.random()*120) +19);
 	var score = "";
 	var maxGoal = 120;
   	console.log("goal is:" + goal);
@@ -29,13 +29,19 @@ function createGoal(){
   	} 
 	else if(goal >18 || goal <  121){
   		return goal;
-  	}  
+	 }
 }
+
 function update(){
-	 score = "";
-	 document.querySelector("#value").innerHTML = score;
-	 goal = "";
-	 document.querySelector("#rand").innerHTML = goal;
+      	document.querySelector("#wins").innerHTML = win;
+  	 	score = "";
+	 	document.querySelector("#value").innerHTML = score;
+	 	goal = ""; 
+	  	createGoal();
+	 	document.querySelector("#rand").innerHTML = goal;
+	  	console.log ("new goal: " + goal);
+	  	diamondValue = Math.floor((Math.random()*12) +1);
+ 	  	console.log ("new score: " + score );
 
 }
 
@@ -44,14 +50,8 @@ function update(){
   document.querySelector("#rand").innerHTML = goal;
 
 	function reset(){
-  	 	score = "";
-	 	document.querySelector("#value").innerHTML = score;
-	 	goal = ""; 
-	  	createGoal();
-	 	document.querySelector("#rand").innerHTML = goal;
-	 	diamondValue = Math.floor((Math.random()*12) +1);
-	  	console.log ("new goal :" + goal);
- 	 	console.log ("new score " + score );
+		update();
+		createGoal();
 		}
 	
 
@@ -63,35 +63,34 @@ function update(){
     console.log("D: Your total score is: " +diamondValue +",   "+ score);
 
     if (score === goal) {
-      alert("You win!");
-      win ++;
-      document.querySelector("#wins").innerHTML = win;
-  		 score = "";
-	 	 document.querySelector("#value").innerHTML = score;
-	 	 goal = ""; 
-	  	 createGoal();
-	 	 document.querySelector("#rand").innerHTML = goal;
-	 	 diamondValue = Math.floor((Math.random()*12) +1);
-	  	 console.log ("new goal :" + goal);
- 	 	 console.log ("new score " + score );
- 	
-  
+     	// alert("You win!");
+      	win ++;
+      	document.querySelector("#wins").innerHTML = win;
+  		// score = "";
+	 	// document.querySelector("#value").innerHTML = score;
+	 	// goal = ""; 
+	  	// createGoal();
+	 	// document.querySelector("#rand").innerHTML = goal;
+	  	// console.log ("new goal: " + goal);
+	  	// diamondValue = Math.floor((Math.random()*12) +1);
+ 	 	// console.log ("new score: " + score );
+ 	  	update();
     }
 
-    else if (score>= goal) {
-      alert("You lose!!");
+    else if (score > goal) {
+      // alert("You lose!!");
       losses++;
       document.querySelector("#losses").innerHTML = losses;
-  		 score = "";
-	 	 document.querySelector("#value").innerHTML = score;
-	 	 goal = ""; 
-	  	 createGoal();
-	 	 document.querySelector("#rand").innerHTML = goal;
-	 	 diamondValue = Math.floor((Math.random()*12) +1);
-	  	 console.log ("new goal :" + goal);
- 	 	 console.log ("new score " + score );
- 	
- 	}
+  		// score = "";
+	 	// document.querySelector("#value").innerHTML = score;
+	 	// goal = ""; 
+	  	// createGoal();
+	 	// document.querySelector("#rand").innerHTML = goal;
+	  	// console.log ("new goal: " + goal);
+	  	// diamondValue = Math.floor((Math.random()*12) +1);
+ 	 	// console.log ("new score: " + score );
+ 	  	update();
+	}
   });
 
 $("#spade-icon").on("click", function() {
@@ -101,16 +100,18 @@ $("#spade-icon").on("click", function() {
     console.log("S: Your total score is:  " +spadeValue+",   "+ score);
 
     if (score === goal) {
-      alert("You win!");
+      // alert("You win!");
       win ++;
       document.querySelector("#wins").innerHTML = win;
-    }
+ 	  update();
+	}
 
     else if (score>= goal) {
-      alert("You lose!!");
+      // alert("You lose!!");
       losses++;
       document.querySelector("#losses").innerHTML = losses;
-        }
+      update();
+	 }
   });
 
 $("#heart-icon").on("click", function() {
@@ -121,16 +122,18 @@ $("#heart-icon").on("click", function() {
     console.log("H: Your total score is:  " +heartValue+",   "+ score);
 
     if (score === goal) {
-      alert("You win!");
+      // alert("You win!");
       win ++;
       document.querySelector("#wins").innerHTML = win;
+      update();
     }
 
     else if (score>= goal) {
-      alert("You lose!!");
+      // alert("You lose!!");
       losses++;
       document.querySelector("#losses").innerHTML = losses;
-        }
+      update();
+    }
   });
 
 $("#clubs-icon").on("click", function() {
@@ -139,16 +142,18 @@ $("#clubs-icon").on("click", function() {
     document.querySelector("#value").innerHTML = score;
     console.log("C: Your total score is:  " +clubsValue+",   "+ score);
     if (score === goal) {
-      alert("You win!");
+      // alert("You win!");
       win ++;
       document.querySelector("#wins").innerHTML = win;
+      update();
     }
 
     else if (score>= goal) {
-      alert("You lose!!");
+      // alert("You lose!!");
       losses++;
       document.querySelector("#losses").innerHTML = losses;
-        }
+      update();
+    }
   });
 
 
